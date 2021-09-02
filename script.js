@@ -1,32 +1,19 @@
-let error = 5;
-const leftBorderWidth = 1;
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-
-const obj = {
-    a: 5,
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    private: false,
 };
 
-console.log('obj: ', obj);
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
 
-obj.a = '2';
-console.log('obj: ', obj);
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-
-const person = {
-    name: 'Vlad',
-    age: 25,
-    canCook : function() {
-       return 'COOK';
-    }
-};
-
-console.log(person.canCook());
-
-
-let num = Number.MAX_SAFE_INTEGER;
-
-
-let id = Symbol('ilkplkd');
-console.info('id: ', id.description);
-
-
+console.log('personalMovieDB: ', personalMovieDB);
